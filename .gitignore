@@ -1,0 +1,30 @@
+# Virtualenv
+.venv/
+
+# Secrets -- never commit. Use .env.example as the template.
+.env
+
+# Captured face images and evaluation output. This is sensitive personal
+# information under RA 10173; it must never reach the repository.
+storage/
+
+# InsightFace model pack (~300 MB), downloaded on first run. The directory
+# itself is tracked for the two READMEs that explain what belongs in it.
+models/*
+!models/anti_spoof/
+models/anti_spoof/*
+!models/anti_spoof/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# PyInstaller (Phase 11). The build tree and the distribution folder are
+# generated; `csu_attendance.spec` is NOT -- it is hand-written and committed,
+# because it is where the model-pack exclusion and the resource paths live.
+build/
+dist/
+
+# The build plan is a working document, kept locally and not published.
+PLAN.md

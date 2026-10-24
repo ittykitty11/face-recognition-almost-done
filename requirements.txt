@@ -1,0 +1,27 @@
+# CSU Attendance Monitoring System — Python dependencies
+#
+# Target interpreter: CPython 3.13 (Windows x64).
+# Every pinned version below was checked to publish a wheel for cp313/win_amd64,
+# so no C++ compiler is required to install this file.
+#
+#   insightface 1.0.1  -> py3-none-any (pure Python; the Cython face3d extension
+#                         is opt-in since 1.0, so nothing is built from source).
+#                         Do NOT downgrade to 0.7.3 -- that release is a
+#                         source-only tarball and needs MSVC Build Tools.
+#   onnxruntime 1.28.0 -> cp313-cp313-win_amd64
+#   PySide6     6.11.1 -> cp310-abi3-win_amd64 (abi3 covers 3.13)
+
+PySide6==6.11.1
+insightface==1.0.1
+onnxruntime==1.28.0
+opencv-python
+numpy
+SQLAlchemy
+PyMySQL
+cryptography          # not needed by MariaDB 10.4, kept for a later move to MySQL 8
+python-dotenv
+openpyxl              # Excel export (Phase 8)
+python-docx           # Editable Civil Service Form 48 monthly DTR exports
+matplotlib            # threshold calibration plots (Phase 10)
+pyinstaller           # packaging (Phase 11)
+pytest
